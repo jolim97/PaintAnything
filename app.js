@@ -5,7 +5,7 @@ const CANVAS_HEIGHT = 800;
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
 const lineWidth = document.getElementById("line-width");
-const color = document.getElementById("line-color");
+const color = document.getElementById("color");
 const colorOptions = Array.from(document.getElementsByClassName("color-option"));
 const modeBtn = document.getElementById("mode-btn");
 const destroyBtn = document.getElementById("destroy-btn");
@@ -92,6 +92,7 @@ function onFileChange(event) {
 
 function onDoubleClick(event) {
     const text = textInput.value;
+    console.log(event.offsetX,event.offsetY);
     if (text !== ""){
         ctx.save();
         ctx.lineWidth = 1;
